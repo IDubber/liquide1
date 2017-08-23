@@ -1,0 +1,17 @@
+
+{% extends "lngtemplate.html" %}
+{% block quiz %} 
+<h2>Результаты опроса:</h2>
+{{ data.question }}
+<br><br><br>
+  <table border="0" width="30%" cellpadding="5">
+
+{% for e in votes %}
+<tr>
+  <td><strong>{{ e[0] }}</strong>  </td>   <td>  {{ e[1] }}</td>
+ </tr>
+{% endfor %}
+
+
+ </table>
+ {% endblock %}

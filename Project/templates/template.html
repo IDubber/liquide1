@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Liquade</title>
+	<link rel="stylesheet" type="text/css" media="all" href="/static/style.css">
+	
+</head>
+<body>
+	<div class="body-1">
+		<!-- START HEADER -->
+		<header>
+			<nav>
+				<a href="/" class="block">Главная</a>
+				<a href="golos" class="block">Голосование</a>
+				<a href="plng" class="block">Языки</a>
+				<a href="otziv" class="block">Отзыв</a>
+			</nav>
+		</header>
+		<!-- END HEADER -->
+		<div class="margi">
+			<div class="white-with-content">
+				<h1>Начало теста</h1>
+				<form action="/ans" method="post">
+					<p>Выберите один из предложенных вариантов.</p>
+
+					<p class="Qest">{{quest}}</p>
+					
+					{% block quiz %}	
+
+					{% endblock %}
+					<input type="submit" value="Отправить">
+					
+				</form>
+
+			</div>
+			<!-- START FOOTER --> 
+			<div class="black-with-content">
+				<div class="disign_by">
+					Design by Liquide. All rights reserved.
+				</div>
+				<div class="icons">
+					<a href="#"><img src="/static/png/vk.png" alt="" class="image-bot"></a>
+					<a href="#"><img src="/static/png/ya.png" alt="" class="image-bot"></a>
+					<a href="#"><img src="/static/png/ok.png" alt="" class="image-bot"></a>
+					<a href="#"><img src="/static/png/m.png" alt="" class="image-bot"></a>
+				</div>
+				<p class="text-footer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum numquam voluptatibus laborum aut culpa iure, fugiat minima animi enim illum quis amet, ad nam, praesentium, sed eveniet iste quaerat quas?</p>
+			</div>
+			<!-- END FOOTER -->
+		</div>
+	</div>
+</body>
+</html>

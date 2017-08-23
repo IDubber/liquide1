@@ -1,0 +1,14 @@
+{% extends "lngtemplate.html" %}
+{% block quiz %} 
+<h3>Отзывы</h3>
+    <a href="/">На главную</a><br><br><br>
+
+    {% for comment in comments %}
+    <table class="ttable" border=0px cellpadding=2 width=300>
+    	<tr><td><strong> {{comment.username}}</strong></td></tr>
+    	<tr><td> {{comment.comment}}</td></tr>
+    </table>
+    <br><br>
+    {% endfor %}
+
+{% endblock %}

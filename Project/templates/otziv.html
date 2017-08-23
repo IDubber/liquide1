@@ -1,0 +1,23 @@
+{% extends "lngtemplate.html" %}
+{% block quiz %} 
+
+<div class="otziv">
+<p><h2>Оставьте свой отзыв</h2></p>
+<form action="/reply" method="post">
+<label><h3>Имя</h3>
+<br>
+<input type="text" name="A">
+</label>
+
+<br>
+<label> <h3>Комментарий</h3>
+<br>
+<textarea cols=100 rows=10 name="B"></textarea>
+<br><br>
+</label>
+<button type="submit">Отправить</button>
+</form>
+<br><br>
+<a href="/replies"> Показать другие отзывы </a>
+</div>
+{% endblock %}

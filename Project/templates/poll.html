@@ -1,0 +1,15 @@
+{% extends "lngtemplate.html" %}
+{% block quiz %} 
+<h1>{{ data.question }}</h1>
+<form action="/poll">
+	{% for e in data.fields %}
+	<label><input type="radio" name="field" value="{{ e }}"> {{ e }}</label><br>
+	{% endfor %}
+	<br>
+	<label>Другой:
+		<input placeholder="Название языка" type="text" name="field">
+	</label>
+	<br> <br>
+	<input type="submit" value="Отправить" />
+	<br><br><br><br><br><br><br><br><br><br><br><a href="/results">Показать результаты</a>
+{% endblock %}

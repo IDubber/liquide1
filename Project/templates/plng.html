@@ -1,0 +1,11 @@
+{% extends "lngtemplate.html" %}
+{% block quiz %} 
+<h2 id="Zag">Здесь вы найдете краткую информацию о популярных языках программирования и план начала обучения.</h2>
+
+
+<div class="blockirty">
+	{% for i in lng_dict.keys() %}
+		<a class="lng" href="{{lng_dict[i]}}">{{i}}</a>
+	{% endfor %}
+</div>
+{% endblock %}
